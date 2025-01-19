@@ -1,37 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <script src="https://cdn.tailwindcss.com"></script>
     <title>TailwindCSS</title>
-  </head>
-  <body>
-    <!-- Positioning -->
+</head>
+<body>
+<!-- Positioning -->
+<div class="relative w-1/2 h-12 bg-red-200">
+    <p>Parent Element</p>
+    <div class="absolute bottom-0 right-0 bg-red-500">
+        <p>Absolute child</p>
+    </div>
+</div>
+<br/>
+<!-- Top left corner -->
+<div class="relative h-32 w-32 bg-yellow-100">
+    <div class="absolute left-0 top-0 h-16 w-16 bg-yellow-300">
+    </div>
+</div>
+<br/>
+<!-- Top right corner -->
+<div class="relative h-32 w-32 bg-yellow-100">
+    <div class="absolute right-0 top-0 h-16 w-16 bg-yellow-300">
+    </div>
+</div>
+<br/>
+<!-- Bottom left corner -->
+<div class="relative h-32 w-32 bg-yellow-100">
+    <div class="absolute left-0 top-0 h-16 w-16 bg-yellow-300">
+    </div>
+</div>
+<br/>
+<!-- Bottom right corner -->
+<div class="relative h-32 w-32 bg-yellow-100">
+    <div class="absolute right-0 bottom-0 h-16 w-16 bg-yellow-300">
+    </div>
+</div>
+<br/>
+<!-- Span top edge -->
+<div class="relative h-32 w-32 bg-yellow-100">
+    <div class="absolute inset-x-0 top-0 h-16 bg-yellow-300">
+    </div>
+</div>
 
-    <!-- Top left corner -->
+<br/>
+<!-- Span left edge -->
+<div class="relative h-32 w-32 bg-yellow-100">
+    <div class="absolute inset-y-0 left-0 w-16 bg-yellow-300">
+    </div>
+</div>
 
-    <!-- Top right corner -->
+<br/>
+<!-- Span right edge -->
+<div class="relative h-32 w-32 bg-yellow-100">
+    <div class="absolute inset-y-0 right-0 w-16 bg-yellow-300">
+    </div>
+</div>
 
-    <!-- Bottom left corner -->
+<br/>
+<!-- Span bottom edge -->
+<div class="relative h-32 w-32 bg-yellow-100">
+    <div class="absolute inset-x-0 bottom-0 h-16 bg-yellow-300">
+    </div>
+</div>
 
-    <!-- Bottom right corner -->
+<!-- Display Classes -->
+<div>
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry. <span
+        class="inline font-bold">This is inline</span>
+    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+    of type and scrambled it to make a type specimen book. <span class="inline-block font-bold">This is inline-block</span>
+    It has survived not only five centuries, but also the leap
+    into electronic typesetting, remaining essentially unchanged. <span class="block font-bold">This is block</span>
+    It was popularised in the 1960s with the release of
+    <span class="hidden font-bold">This is hidden</span> Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus
+    PageMaker including versions of Lorem Ipsum.
+</div>
 
-    <!-- Span top edge -->
+<!-- Z-Index -->
+<div class="relative h-36">
+    <div class="absolute left-10 w-24 h-24 bg-blue-300 z-40">1</div>
+    <div class="absolute left-20 w-24 h-24 bg-blue-400">2</div>
+    <div class="absolute left-40 w-24 h-24 bg-blue-500 z-10">3</div>
+    <div class="absolute left-60 w-24 h-24 bg-blue-600 z-20">4</div>
+    <div class="absolute left-80 w-24 h-24 bg-blue-700 z-30">5</div>
+</div>
 
-    <!-- Span left edge -->
+<!-- Floats -->
+<div class="w-1/2">
+    <img class="h-48 w-48 float-right" src="../assets/img/img1.jpg" alt="" />
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aperiam consequuntur debitis facere libero repellat repudiandae tempora voluptas? Autem commodi delectus dolorem doloremque inventore ipsum magnam magni quas temporibus veniam.</p>
+</div>
 
-    <!-- Span right edge -->
 
-    <!-- Span bottom edge -->
-
-    <!-- Display Classes -->
-
-    <!-- Z-Index -->
-
-    <!-- Floats -->
-  </body>
+</body>
 </html>
 
 <!-- Position Classes

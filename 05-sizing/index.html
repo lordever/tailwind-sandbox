@@ -1,35 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Sizing</title>
-  </head>
-  <body>
-    <!-- Width -->
+</head>
+<body>
+<!-- Width -->
+<div class="bg-black text-white w-4">Tailwind is awesome</div>
+<div class="bg-black text-white w-48">Tailwind is awesome</div>
+<div class="bg-black text-white w-96">Tailwind is awesome</div>
 
-    <!-- Percentages -->
+<!-- Percentages -->
+<div class="bg-green-700 text-white w-1/4">Tailwind is awesome</div>
+<div class="bg-green-700 text-white w-1/3">Tailwind is awesome</div>
+<div class="bg-green-700 text-white w-1/2">Tailwind is awesome</div>
 
-    <!-- Width of the viewport -->
+<!-- Width of the viewport -->
+<div class="bg-blue-500 text-white w-screen">Tailwind is awesome</div>
 
-    <!-- 100% of container -->
+<!-- 100% of container -->
+<div class="bg-blue-300 text-white w-full">Tailwind is awesome</div>
 
-    <!-- min/max content -->
+<!-- min/max content -->
 
-    <!-- Arbitrary width -->
+<!-- Arbitrary width -->
+<div class="bg-blue-700 text-white w-[300px]">Tailwind is awesome</div>
 
-    <!-- Max Width -->
+<!-- Max Width -->
+<div class="bg-gray-300 max-w-lg mx-auto">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+    of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
+    into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+    Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus
+    PageMaker including versions of Lorem Ipsum.
+</div>
 
-    <!-- Height (Most of the same options as widths) -->
+<!-- Height (Most of the same options as widths) -->
+<div class="flex items-end">
+    <div class="bg-orange-500 w-20 h-24">Hello</div>
+    <div class="bg-orange-500 w-20 h-32">Hello</div>
+    <div class="bg-orange-500 w-20 h-40">Hello</div>
+    <div class="bg-orange-500 w-20 h-48">Hello</div>
+    <div class="bg-orange-500 w-20 h-64">Hello</div>
+    <div class="bg-orange-500 w-20 h-96">Hello</div>
+</div>
 
-    <!-- Min Height -->
+<!-- Min Height -->
 
-    <!-- Max Height -->
+<!-- Max Height -->
 
-    <!-- Full screen height -->
-  </body>
+<!-- Full screen height -->
+<div class="bg-blue-300 text-white h-screen">Tailwind is awesome</div>
+</body>
 </html>
 
 <!-- 

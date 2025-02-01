@@ -6,13 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Customization</title>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          screens: {
+            sm: '550px',
+            md: '800px',
+            lg: '1200px',
+            xl: '1440px'
+          },
+          fontFamily: {
+            sans: ['Graphik', 'sans-serif'],
+            serif: ['Merriweather', 'serif'],
+          },
+          extend: {
+            colors: {
+              primary: '#ff5733',
+              secondary: '#fffc33'
+            },
+            spacing: {
+              6: '2.5rem',
+              128: '32rem'
+            },
+            borderRadius: {
+              '4xl': '2rem'
+            }
+          }
+        }
+      }
+    </script>
   </head>
   <body
     class="bg-black sm:bg-green-800 md:bg-primary lg:bg-yellow-800 xl:bg-purple-800 2xl:bg-orange-800"
   >
-    <h1 class="text-white text-xl md:text-3xl xl:text-5xl">
+  <div class="border-secondary border p-6 mb-128 max-w-sm mx-auto rounded-4xl">
+    <h1 class="text-primary text-xl md:text-3xl xl:text-5xl">
       Tailwind is awesome
     </h1>
+  </div>
 
     <script>
       function showBrowserWidth() {

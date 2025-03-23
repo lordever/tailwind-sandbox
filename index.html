@@ -8,12 +8,59 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+          rel="stylesheet">
     <title>Social Links Profile</title>
 </head>
 <body>
-<h1 class="text-3xl">
-    Hello world!
-</h1>
+    <div class="flex items-center justify-center h-screen bg-dark ">
+        <!-- Card Container -->
+        <div
+                class="flex flex-col items-center justify-center bg-darkGray mx-auto my-auto rounded-md
+                text-white pt-[50px] pb-[32px] px-[38px]">
+            <!-- Avatar -->
+            <img src="./images/avatar-jessica.jpeg" alt="avatar"
+                 class="w-[83px] h-[83px] rounded-full"/>
+
+            <!--Name & address container -->
+            <div class="mt-5 flex flex-col items-center gap-1.5">
+                <h2 class="text-xl">Jessica Randall</h2>
+                <p class="text-xs font-bold text-saladGreen">London, United Kingdom</p>
+            </div>
+
+            <!-- Description container -->
+            <div class="mt-7">
+                <p class="text-xs text-gray-500">"Front-end developer and avid reader"</p>
+            </div>
+
+            <!--Menu-->
+            <nav class="flex flex-col gap-3 mt-5 min-w-[242px]">
+                <!-- Item 1 -->
+                <button class="group btn hover:bg-saladGreen">
+                    <span class="font-bold text-xs group-hover:text-black">GitHub</span>
+                </button>
+
+                <!-- Item 2 -->
+                <button class="group btn hover:bg-saladGreen">
+                    <span class="font-bold text-xs group-hover:text-black">Fontend Mentor</span>
+                </button>
+
+                <!-- Item 3 -->
+                <button class="group btn hover:bg-saladGreen">
+                    <span class="font-bold text-xs group-hover:text-black">LinkedIn</span>
+                </button>
+
+                <!-- Item 4 -->
+                <button class="group btn hover:bg-saladGreen">
+                    <span class="font-bold text-xs group-hover:text-black">Twitter</span>
+                </button>
+
+                <!-- Item 5 -->
+                <button class="group btn hover:bg-saladGreen">
+                    <span class="font-bold text-xs group-hover:text-black">Instagram</span>
+                </button>
+            </nav>
+        </div>
+    </div>
 </body>
 </html>

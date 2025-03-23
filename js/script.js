@@ -4,6 +4,7 @@ const menu = document.getElementById('menu')
 btn.addEventListener('click', navToggle)
 
 function navToggle() {
+    console.log("HELLO")
     btn.classList.toggle('open')
     menu.classList.toggle('flex')
     menu.classList.toggle('hidden')

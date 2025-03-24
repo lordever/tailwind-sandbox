@@ -14,6 +14,7 @@ module.exports = {
         brown: '#7b4735',
         black: '#3d3a39',
         gray: '#a19e9a',
+        lightGray: '#e9e9e9'
       }
     },
   },

@@ -4,6 +4,10 @@
 
 @layer components {
     .list {
-        @apply list-disc flex flex-col gap-2 pl-[20px] marker:text-darkPink font-outfit;
+        @apply flex flex-col gap-2 pl-[20px] font-outfit;
+    }
+
+    .divider {
+        @apply border-b w-full h-0 px-[25px] border-lightGray;
     }
 }

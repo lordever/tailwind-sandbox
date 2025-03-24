@@ -17,10 +17,11 @@
     <title>Recipe Page</title>
 </head>
 <body>
-    <div class="h-screen bg-lightPink md:flex md:items-center md:justify-center">
+    <div class="h-full bg-lightPink md:flex md:items-center md:justify-center">
         <!--Card Container -->
         <div
-                class="flex flex-col w-full bg-white pb-[25px] md:max-w-[524px] md:rounded-xl md:justify-center">
+                class="flex flex-col w-full bg-white pb-[25px] md:my-8 md:max-w-[524px]
+                md:rounded-xl md:justify-center">
             <!--Image -->
             <img src="./images/image-omelette.jpeg" alt="image"
                  class="md:rounded-[40px] md:px-[25px] md:py-[20px]">
@@ -43,7 +44,7 @@
                     <h3 class="font-outfit font-bold text-xl text-darkPink">Preparation time</h3>
 
                     <ol
-                            class="list text-black">
+                            class="list list-disc marker:text-darkPink text-black">
                         <li>
                             <p>
                                 <strong>Total:</strong> Approximately 10 minutes
@@ -63,12 +64,13 @@
                 </div>
 
                 <!--Ingredients section-->
+
                 <section class="flex flex-col gap-6">
                     <h2 class="text-2xl text-brown">
                         Ingredients
                     </h2>
 
-                    <ol class="list text-gray">
+                    <ol class="list list-disc marker:text-brown text-gray">
                         <li>
                             <span>2-3 large eggs</span>
                         </li>
@@ -86,6 +88,76 @@
                         </li>
                     </ol>
                 </section>
+
+                <div class="divider"></div>
+
+                <!--Instructions -->
+
+                <section class="flex flex-col gap-6">
+                    <h2 class="text-2xl text-brown">
+                        Instructions
+                    </h2>
+
+                    <ol class="list list-decimal marker:text-brown text-gray">
+                        <li>
+                            <span>
+                                <strong class="text-black">Beat the eggs:</strong>
+                                In a bowl, beat the eggs with
+                                a pinch of
+                                salt
+                                        and pepper until they are well mixed.
+  You can add a tablespoon of water or milk for a fluffier texture.</span>
+                        </li>
+                        <li>
+                            <span>
+                                <strong class="text-black">Heat the pan:</strong> Place a non-stick
+                                frying
+                                pan
+                                over
+                                medium
+                                              heat and add butter or oil.</span>
+                        </li>
+                        <li>
+                            <span><strong class="text-black">Cook the omelette:</strong> Once the
+                                butter
+                                is
+                                melted
+                                and
+                                bubbling,
+                                        pour in the eggs. Tilt the pan to ensure
+  the eggs evenly coat the surface.</span>
+                        </li>
+                        <li>
+                            <span><strong class="text-black">Add fillings (optional):</strong> When
+                                the
+                                eggs
+                                begin
+                                to set at
+                                the edges but are still slightly runny in the
+  middle, sprinkle your chosen fillings over one half of the omelette.</span>
+                        </li>
+                        <li>
+                            <span><strong class="text-black">Fold and serve:</strong> As the
+                                omelette
+                                continues
+                                to
+                                cook,
+                                             carefully lift one edge and fold it over the
+  fillings. Let it cook for another minute, then slide it onto a plate.</span>
+                        </li>
+                        <li>
+                            <span><strong class="text-black">Enjoy:</strong> Serve hot, with
+                                additional
+                                salt
+                                and
+                                pepper if
+                                needed.</span>
+                        </li>
+                    </ol>
+                </section>
+
+                <div class="divider"></div>
+
             </section>
         </div>
     </div>

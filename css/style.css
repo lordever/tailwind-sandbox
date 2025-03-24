@@ -590,31 +590,40 @@ video {
 
 .list {
   display: flex;
-  list-style-type: disc;
   flex-direction: column;
   gap: 0.5rem;
   padding-left: 20px;
   font-family: Outfit, serif;
 }
 
-.list *::marker {
-  color: rgb(124 71 93 );
-}
-
-.list::marker {
-  color: rgb(124 71 93 );
+.divider {
+  height: 0px;
+  width: 100%;
+  border-bottom-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(233 233 233 / var(--tw-border-opacity, 1));
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 .flex {
   display: flex;
 }
 
-.h-screen {
-  height: 100vh;
+.h-full {
+  height: 100%;
 }
 
 .w-full {
   width: 100%;
+}
+
+.list-decimal {
+  list-style-type: decimal;
+}
+
+.list-disc {
+  list-style-type: disc;
 }
 
 .flex-col {
@@ -715,7 +724,28 @@ video {
   color: rgb(161 158 154 / var(--tw-text-opacity, 1));
 }
 
+.marker\:text-brown *::marker {
+  color: rgb(123 71 53 );
+}
+
+.marker\:text-darkPink *::marker {
+  color: rgb(124 71 93 );
+}
+
+.marker\:text-brown::marker {
+  color: rgb(123 71 53 );
+}
+
+.marker\:text-darkPink::marker {
+  color: rgb(124 71 93 );
+}
+
 @media (min-width: 768px) {
+  .md\:my-8 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
   .md\:flex {
     display: flex;
   }

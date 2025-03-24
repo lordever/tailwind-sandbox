@@ -645,6 +645,10 @@ video {
   display: table;
 }
 
+.hidden {
+  display: none;
+}
+
 .h-full {
   height: 100%;
 }
@@ -800,6 +804,10 @@ video {
   .md\:my-8 {
     margin-top: 2rem;
     margin-bottom: 2rem;
+  }
+
+  .md\:block {
+    display: block;
   }
 
   .md\:flex {

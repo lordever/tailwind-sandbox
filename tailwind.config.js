@@ -4,13 +4,15 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Outfit', 'sans-serif'],
-        youngSerif: ['Young Serif', 'serif']
+        sans: ['Young Serif', 'sans-serif'],
+        outfit: ['Outfit', 'serif']
       },
       colors: {
         lightPink: '#f3e5d8',
         pink: '#fff7fc',
-        brown: '#7b4735'
+        brown: '#7b4735',
+        black: '#3d3a39',
+        gray: '#b4b1ae'
       }
     },
   },

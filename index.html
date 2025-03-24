@@ -17,10 +17,24 @@
     <title>Recipe Page</title>
 </head>
 <body>
-    <div class="h-screen bg-lightPink text-white">
+    <div class="h-screen bg-lightPink md:flex md:items-center md:justify-center">
         <!--Card Container -->
-        <div class="items-center w-full h-full bg-white pb-[25px] max-w-[388px]">
-            <img src="./images/image-omelette.jpeg" alt="image" class="w-full">
+        <div
+                class="flex flex-col w-full bg-white pb-[25px] md:max-w-[524px] md:rounded-xl md:justify-center">
+            <!--Image -->
+            <img src="./images/image-omelette.jpeg" alt="image"
+                 class="md:rounded-xl md:px-[25px] md:py-[20px]">
+
+            <!--Inner container with padding -->
+            <section class="flex flex-col gap-6 text-left text-black px-[25px] py-[20px]">
+                <!--Title & description -->
+                <h1 class="text-4xl">Simple Omelette Recipe</h1>
+
+                <p class="text-sm text-gray font-outfit">An easy and quick dish, perfect for any meal.
+                    This
+                    classic omelette combines beaten eggs cooked
+                    to perfection, optionally filled with your choice of cheese, vegetables, or meats.</p>
+            </section>
         </div>
     </div>
 </body>

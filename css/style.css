@@ -124,7 +124,7 @@
   /* 2 */
   border-style: solid;
   /* 2 */
-  border-color: #e5e7eb;
+  border-color: currentColor;
   /* 2 */
 }
 
@@ -154,7 +154,7 @@ html,
   -o-tab-size: 4;
      tab-size: 4;
   /* 3 */
-  font-family: Outfit, sans-serif;
+  font-family: Young Serif, sans-serif;
   /* 4 */
   font-feature-settings: normal;
   /* 5 */
@@ -596,24 +596,20 @@ video {
   height: 100vh;
 }
 
-.h-full {
-  height: 100%;
-}
-
 .w-full {
   width: 100%;
 }
 
-.max-w-\[388px\] {
-  max-width: 388px;
+.flex-col {
+  flex-direction: column;
 }
 
-.items-center {
-  align-items: center;
+.gap-6 {
+  gap: 1.5rem;
 }
 
-.justify-center {
-  justify-content: center;
+.rounded-xl {
+  border-radius: 0.75rem;
 }
 
 .bg-lightPink {
@@ -626,26 +622,80 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
 }
 
-.px-\[\] {
-  padding-left: ;
-  padding-right: ;
-}
-
 .px-\[25px\] {
   padding-left: 25px;
   padding-right: 25px;
 }
 
-.px-\[-25px\] {
-  padding-left: -25px;
-  padding-right: -25px;
+.py-\[20px\] {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .pb-\[25px\] {
   padding-bottom: 25px;
 }
 
-.text-white {
+.text-left {
+  text-align: left;
+}
+
+.font-outfit {
+  font-family: Outfit, serif;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.text-black {
   --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+  color: rgb(61 58 57 / var(--tw-text-opacity, 1));
+}
+
+.text-gray {
+  --tw-text-opacity: 1;
+  color: rgb(180 177 174 / var(--tw-text-opacity, 1));
+}
+
+@media (min-width: 768px) {
+  .md\:flex {
+    display: flex;
+  }
+
+  .md\:min-w-\[524px\] {
+    min-width: 524px;
+  }
+
+  .md\:max-w-\[524px\] {
+    max-width: 524px;
+  }
+
+  .md\:items-center {
+    align-items: center;
+  }
+
+  .md\:justify-center {
+    justify-content: center;
+  }
+
+  .md\:rounded-xl {
+    border-radius: 0.75rem;
+  }
+
+  .md\:px-\[25px\] {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .md\:py-\[20px\] {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
 }

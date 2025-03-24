@@ -10,9 +10,10 @@ module.exports = {
       colors: {
         lightPink: '#f3e5d8',
         pink: '#fff7fc',
+        darkPink: '#7c475d',
         brown: '#7b4735',
         black: '#3d3a39',
-        gray: '#b4b1ae'
+        gray: '#b4b1ae',
       }
     },
   },

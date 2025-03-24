@@ -600,12 +600,28 @@ video {
   width: 100%;
 }
 
+.list-decimal {
+  list-style-type: decimal;
+}
+
+.list-disc {
+  list-style-type: disc;
+}
+
 .flex-col {
   flex-direction: column;
 }
 
 .gap-6 {
   gap: 1.5rem;
+}
+
+.gap-1 {
+  gap: 0.25rem;
+}
+
+.gap-2 {
+  gap: 0.5rem;
 }
 
 .rounded-xl {
@@ -617,9 +633,19 @@ video {
   background-color: rgb(243 229 216 / var(--tw-bg-opacity, 1));
 }
 
+.bg-pink {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 247 252 / var(--tw-bg-opacity, 1));
+}
+
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+}
+
+.px-\[20px\] {
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .px-\[25px\] {
@@ -634,6 +660,18 @@ video {
 
 .pb-\[25px\] {
   padding-bottom: 25px;
+}
+
+.pl-\[20px\] {
+  padding-left: 20px;
+}
+
+.pr-\[20px\] {
+  padding-right: 20px;
+}
+
+.pr-\[200px\] {
+  padding-right: 200px;
 }
 
 .text-left {
@@ -654,6 +692,15 @@ video {
   line-height: 1.25rem;
 }
 
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
 .text-black {
   --tw-text-opacity: 1;
   color: rgb(61 58 57 / var(--tw-text-opacity, 1));
@@ -662,6 +709,19 @@ video {
 .text-gray {
   --tw-text-opacity: 1;
   color: rgb(180 177 174 / var(--tw-text-opacity, 1));
+}
+
+.text-darkPink {
+  --tw-text-opacity: 1;
+  color: rgb(124 71 93 / var(--tw-text-opacity, 1));
+}
+
+.marker\:text-darkPink *::marker {
+  color: rgb(124 71 93 );
+}
+
+.marker\:text-darkPink::marker {
+  color: rgb(124 71 93 );
 }
 
 @media (min-width: 768px) {

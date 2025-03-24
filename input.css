@@ -10,4 +10,9 @@
     .divider {
         @apply border-b w-full h-0 px-[25px] border-lightGray;
     }
+
+    .btn {
+        @apply px-10 py-2 my-0 font-bold tracking-widest uppercase border-2
+        border-black font-outfit hover:bg-black hover:text-white;
+    }
 }

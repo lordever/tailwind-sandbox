@@ -8,7 +8,9 @@ module.exports = {
       },
       colors: {
         vanillaCream: '#fcf8f5',
-        darkBrown: '#291510'
+        darkBrown: '#291510',
+        orange: '#c3522b',
+        taupeGray: '#a59794'
       }
     },
   },

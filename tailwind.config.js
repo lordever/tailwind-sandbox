@@ -10,6 +10,7 @@ module.exports = {
         vanillaCream: '#fcf8f5',
         darkBrown: '#291510',
         orange: '#c3522b',
+        brightOrange: '#c83b0e',
         taupeGray: '#a59794'
       }
     },

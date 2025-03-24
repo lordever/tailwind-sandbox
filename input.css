@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .addBtn {
+        @apply flex gap-2 flex-row-reverse justify-center items-center text-sm bg-white
+        rounded-full border border-gray-300 px-[20px] py-[12px] shadow;
+    }
+}

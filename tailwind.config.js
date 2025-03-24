@@ -13,7 +13,7 @@ module.exports = {
         darkPink: '#7c475d',
         brown: '#7b4735',
         black: '#3d3a39',
-        gray: '#b4b1ae',
+        gray: '#a19e9a',
       }
     },
   },

@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .list {
+        @apply list-disc flex flex-col gap-2 pl-[20px] marker:text-darkPink font-outfit;
+    }
+}

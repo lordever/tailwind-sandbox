@@ -182,7 +182,8 @@
 
                     <div class="mt-8">
                         <h6 class="text-xs text-warmTaupe">Brownie</h6>
-                        <h5 class="text-lg font-semibold text-midnightWine">Salted Caramel Brownie</h5>
+                        <h5 class="text-lg font-semibold text-midnightWine">Salted Caramel
+                            Brownie</h5>
                         <span class="text-orange text-lg font-semibold">$4.50</span>
                     </div>
                 </div>
@@ -219,7 +220,7 @@
                 </h3>
 
                 <!-- Empty Cart Content -->
-                <div class="flex flex-col items-center justify-center gap-4">
+                <div id="emptyCart" class="hidden flex-col items-center justify-center gap-4">
                     <img src="./images/illustration-empty-cart.svg" alt="empty-cart"
                          class="w-[112px] h-[99px]">
 
@@ -227,7 +228,81 @@
                         here</p>
                 </div>
 
-                <!-- TODO: Products in card statement -->
+                <!-- Cart -->
+                <div id="cart" class="flex flex-col gap-5">
+                    <!-- Product item 1 -->
+                    <div
+                            class="flex flex-row justify-between gap-3 pb-4 border-b
+                            border-b-gray-200 items-center">
+                        <div class="flex flex-col gap-2">
+                            <h6 class="text-xs font-semibold">Classic Tiramisu</h6>
+
+                            <p class="text-xs">
+                                <strong class="text-orange mr-4">x1</strong>
+                                <strong class="text-roseBeige mr-4 opacity-60">@ $5.50</strong>
+                                <strong class="text-roseBeige mr-4">$5.50</strong>
+                            </p>
+                        </div>
+
+                        <img src="./images/icon-remove-item.svg" alt="remove"
+                             class="cursor-pointer rounded-full p-0.5 border border-roseBeige
+                             hover:invert hover:bg-black"/>
+                    </div>
+
+                    <!-- Product item 2 -->
+                    <div class="flex flex-row justify-between gap-3 pb-4 border-b
+                            border-b-gray-200 items-center">
+                        <div class="flex flex-col gap-2">
+                            <h6 class="text-xs font-semibold">Vanilla Bean Crème Brûlée</h6>
+
+                            <p class="text-xs">
+                                <strong class="text-orange mr-4">x3</strong>
+                                <strong class="text-roseBeige mr-4 opacity-60">@ $7.00</strong>
+                                <strong class="text-roseBeige mr-4">$28.00</strong>
+                            </p>
+                        </div>
+
+                        <img src="./images/icon-remove-item.svg" alt="remove"
+                             class="cursor-pointer rounded-full p-0.5 border border-roseBeige
+                             hover:invert hover:bg-black"/>
+                    </div>
+
+                    <!-- Product item 3 -->
+                    <div class="flex flex-row justify-between gap-3 pb-4 border-b
+                            border-b-gray-200 items-center">
+                        <div class="flex flex-col gap-2">
+                            <h6 class="text-xs font-semibold">Lemon Meringue Pie</h6>
+
+                            <p class="text-xs">
+                                <strong class="text-orange mr-4">x4</strong>
+                                <strong class="text-roseBeige mr-4 opacity-60">@ $5.00</strong>
+                                <strong class="text-roseBeige mr-4">$20.00</strong>
+                            </p>
+                        </div>
+
+                        <img src="./images/icon-remove-item.svg" alt="remove"
+                             class="cursor-pointer rounded-full p-0.5 border border-roseBeige
+                             hover:invert hover:bg-black"/>
+                    </div>
+
+                    <!-- Product item 4 -->
+                    <div class="flex flex-row justify-between gap-3 pb-4 border-b
+                            border-b-gray-200 items-center">
+                        <div class="flex flex-col gap-2">
+                            <h6 class="text-xs font-semibold">Red Velvet Cake</h6>
+
+                            <p class="text-xs">
+                                <strong class="text-orange mr-4">x2</strong>
+                                <strong class="text-roseBeige mr-4 opacity-60">@ $4.50</strong>
+                                <strong class="text-roseBeige mr-4">$17.00</strong>
+                            </p>
+                        </div>
+
+                        <img src="./images/icon-remove-item.svg" alt="remove"
+                             class="cursor-pointer rounded-full p-0.5 border border-roseBeige
+                             hover:invert hover:bg-black"/>
+                    </div>
+                </div>
             </div>
         </section>
     </div>

@@ -645,6 +645,18 @@ video {
   margin-top: 2rem;
 }
 
+.mr-1\.5 {
+  margin-right: 0.375rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.mt-5 {
+  margin-top: 1.25rem;
+}
+
 .flex {
   display: flex;
 }
@@ -680,6 +692,10 @@ video {
 .w-max {
   width: -moz-max-content;
   width: max-content;
+}
+
+.w-\[19px\] {
+  width: 19px;
 }
 
 .min-w-\[191px\] {
@@ -766,6 +782,14 @@ video {
   border-radius: 0.75rem;
 }
 
+.rounded-md {
+  border-radius: 0.375rem;
+}
+
+.rounded-2xl {
+  border-radius: 1rem;
+}
+
 .border {
   border-width: 1px;
 }
@@ -794,6 +818,11 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
 }
 
+.bg-orange {
+  --tw-bg-opacity: 1;
+  background-color: rgb(195 82 43 / var(--tw-bg-opacity, 1));
+}
+
 .p-0\.5 {
   padding: 0.125rem;
 }
@@ -816,6 +845,26 @@ video {
 .py-\[30px\] {
   padding-top: 30px;
   padding-bottom: 30px;
+}
+
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
 }
 
 .pb-4 {
@@ -850,6 +899,10 @@ video {
   font-weight: 600;
 }
 
+.font-medium {
+  font-weight: 500;
+}
+
 .text-darkBrown {
   --tw-text-opacity: 1;
   color: rgb(41 21 16 / var(--tw-text-opacity, 1));
@@ -880,6 +933,11 @@ video {
   color: rgb(148 136 130 / var(--tw-text-opacity, 1));
 }
 
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
 .opacity-60 {
   opacity: 0.6;
 }
@@ -889,14 +947,31 @@ video {
   background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1));
 }
 
+.hover\:bg-brightOrange:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(200 59 14 / var(--tw-bg-opacity, 1));
+}
+
 .hover\:invert:hover {
   --tw-invert: invert(100%);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 @media (min-width: 768px) {
+  .md\:min-w-\[170px\] {
+    min-width: 170px;
+  }
+
   .md\:max-w-\[306px\] {
     max-width: 306px;
+  }
+
+  .md\:max-w-\[400px\] {
+    max-width: 400px;
+  }
+
+  .md\:max-w-\[350px\] {
+    max-width: 350px;
   }
 
   .md\:basis-1\/3 {

@@ -211,8 +211,7 @@
         </section>
 
         <!-- Cart -->
-        <section class="flex flex-none w-full md:basis-1/3 md:max-w-[306px]">
-            <!-- Empty Cart -->
+        <section class="flex flex-none w-full md:basis-1/3 md:max-w-[350px]">
             <div class="bg-white rounded-xl px-8 py-8 w-full">
                 <h3 class="text-2xl font-bold text-orange mb-4">
                     Your Cart (0)
@@ -228,7 +227,8 @@
                         here</p>
                 </div>
 
-                <!-- Cart -->
+                <!-- Cart with products -->
+
                 <div id="cart" class="flex flex-col gap-5">
                     <!-- Product item 1 -->
                     <div
@@ -302,6 +302,30 @@
                              class="cursor-pointer rounded-full p-0.5 border border-roseBeige
                              hover:invert hover:bg-black"/>
                     </div>
+
+                    <!-- Order total -->
+                    <div class="flex justify-between items-center">
+                        <h6 class="font-medium text-xs text-darkBrown">Order total</h6>
+                        <h2 class="text-lg font-bold">$61.50</h2>
+                    </div>
+
+                    <!-- Delivery section -->
+                    <div
+                            class="flex items-center justify-center bg-vanillaCream py-2 px-6 rounded-md">
+                        <img src="./images/icon-carbon-neutral.svg" alt="icon-carbon"
+                             class="w-[19px] mr-1.5">
+
+                        <span class="font-medium text-xs text-darkBrown">
+                            This is a
+                            <strong>carbon-neutral</strong>
+                            delivery
+                        </span>
+                    </div>
+
+                    <button
+                            class="font-medium w-full py-2 rounded-2xl bg-orange text-white hover:bg-brightOrange">
+                        Confirm Order
+                    </button>
                 </div>
             </div>
         </section>

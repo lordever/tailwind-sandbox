@@ -11,7 +11,9 @@ module.exports = {
         darkBrown: '#291510',
         orange: '#c3522b',
         brightOrange: '#c83b0e',
-        taupeGray: '#a59794'
+        taupeGray: '#a59794',
+        warmTaupe: '#948882',
+        midnightWine: '#110d0d'
       }
     },
   },

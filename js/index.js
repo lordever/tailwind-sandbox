@@ -37,12 +37,57 @@ class Order {
         }
     }
 
+    renderProductTemplates() {
+        let html = '';
 
+        Object.entries(this.products).forEach(([productId, count]) => {
+            const productData = PRODUCTS_LIST.find(p => p[productId]);
+            if (!productData) return;
+
+            const {name, price} = productData[productId];
+            const priceNum = parseFloat(price);
+            const totalPrice = (priceNum * count).toFixed(2);
+
+            html += `
+                <div class="flex flex-row justify-between gap-3 pb-4 border-b border-b-gray-200 items-center">
+                    <div class="flex flex-col gap-2">
+                        <h6 class="text-xs font-semibold">${name}</h6>
+                        <p class="text-xs">
+                            <strong class="text-orange mr-4">x${count}</strong>
+                            <strong class="text-roseBeige mr-4 opacity-60">@ $${price}</strong>
+                            <strong class="text-roseBeige mr-4">$${totalPrice}</strong>
+                        </p>
+                    </div>
+                    <img src="./images/icon-remove-item.svg" alt="remove"
+                         class="cursor-pointer rounded-full p-0.5 border border-roseBeige
+                         hover:invert hover:bg-black"/>
+                </div>
+            `;
+        });
+
+        return html;
+    }
+
+    getOrderTotalPrice() {
+        let totalPrice = 0
+        Object.entries(this.products).forEach(([productId, productCount]) => {
+            const productData = PRODUCTS_LIST.find(p => p[productId]);
+            if (productData) {
+                const {price} = productData[productId];
+                const productPrice = parseFloat(price)
+                totalPrice += productPrice * productCount
+            }
+        })
+
+        return totalPrice.toFixed(2);
+    }
 }
 
 const cart = document.getElementById('cart');
 const emptyCart = document.getElementById('emptyCart');
 const cartCount = document.getElementById('cartCount')
+const orderItemsContainer = document.getElementById('orderItemsContainer')
+const orderTotalPrice = document.getElementById('orderTotalPrice')
 const order = new Order();
 
 showCart()
@@ -62,7 +107,7 @@ function showCart() {
         emptyCart.classList.add("flex")
     }
 
-    cartCount.innerHTML = count;
+    cartCount.innerHTML = +count;
 }
 
 const btns = document.querySelectorAll(".addBtn")
@@ -75,5 +120,7 @@ btns.forEach((btn) => {
         order.addProduct(clickedButton.id)
 
         showCart()
+        orderItemsContainer.innerHTML = order.renderProductTemplates()
+        orderTotalPrice.innerHTML = order.getOrderTotalPrice()
     })
 })

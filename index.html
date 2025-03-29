@@ -13,6 +13,8 @@
           rel="stylesheet">
 
     <title>Shopping - Product List</title>
+
+    <script defer src="./js/index.js"></script>
 </head>
 <body class="bg-vanillaCream">
     <div
@@ -30,7 +32,8 @@
                         <img src="./images/image-waffle-desktop.jpg" alt="product"
                              class="min-w-[191px] rounded-xl"/>
 
-                        <button class="absolute addBtn -bottom-5 inset-x-0 mx-auto w-max">
+                        <button id="product_1"
+                                class="absolute addBtn -bottom-5 inset-x-0 mx-auto w-max">
                             Add to Cart
                             <img src="./images/icon-add-to-cart.svg" alt="addToCart"
                                  class="w-[16px] h-[16px]"/>
@@ -51,7 +54,7 @@
                         <img src="./images/image-creme-brulee-desktop.jpg" alt="product"
                              class="min-w-[191px] rounded-xl"/>
 
-                        <button class="absolute addBtn -bottom-5 inset-x-0 mx-auto w-max">
+                        <button id="product_2" class="absolute addBtn -bottom-5 inset-x-0 mx-auto w-max">
                             Add to Cart
                             <img src="./images/icon-add-to-cart.svg" alt="addToCart"
                                  class="w-[16px] h-[16px]"/>
@@ -72,7 +75,8 @@
                         <img src="./images/image-macaron-desktop.jpg" alt="product"
                              class="min-w-[191px] rounded-xl"/>
 
-                        <button class="absolute addBtn -bottom-5 inset-x-0 mx-auto w-max">
+                        <button id="product_3"
+                                class="absolute addBtn -bottom-5 inset-x-0 mx-auto w-max">
                             Add to Cart
                             <img src="./images/icon-add-to-cart.svg" alt="addToCart"
                                  class="w-[16px] h-[16px]"/>
@@ -93,7 +97,8 @@
                         <img src="./images/image-tiramisu-desktop.jpg" alt="product"
                              class="min-w-[191px] rounded-xl"/>
 
-                        <button class="absolute addBtn -bottom-5 inset-x-0 mx-auto w-max">
+                        <button id="product_4"
+                                class="absolute addBtn -bottom-5 inset-x-0 mx-auto w-max">
                             Add to Cart
                             <img src="./images/icon-add-to-cart.svg" alt="addToCart"
                                  class="w-[16px] h-[16px]"/>
@@ -113,7 +118,7 @@
                         <img src="./images/image-baklava-desktop.jpg" alt="product"
                              class="min-w-[191px] rounded-xl"/>
 
-                        <button class="absolute addBtn -bottom-5 inset-x-0 mx-auto w-max">
+                        <button id="product_5" class="absolute addBtn -bottom-5 inset-x-0 mx-auto w-max">
                             Add to Cart
                             <img src="./images/icon-add-to-cart.svg" alt="addToCart"
                                  class="w-[16px] h-[16px]"/>
@@ -133,7 +138,7 @@
                         <img src="./images/image-meringue-desktop.jpg" alt="product"
                              class="min-w-[191px] rounded-xl"/>
 
-                        <button class="absolute addBtn -bottom-5 inset-x-0 mx-auto w-max">
+                        <button id="product_6" class="absolute addBtn -bottom-5 inset-x-0 mx-auto w-max">
                             Add to Cart
                             <img src="./images/icon-add-to-cart.svg" alt="addToCart"
                                  class="w-[16px] h-[16px]"/>
@@ -153,7 +158,7 @@
                         <img src="./images/image-cake-desktop.jpg" alt="product"
                              class="min-w-[191px] rounded-xl"/>
 
-                        <button class="absolute addBtn -bottom-5 inset-x-0 mx-auto w-max">
+                        <button id="product_7" class="absolute addBtn -bottom-5 inset-x-0 mx-auto w-max">
                             Add to Cart
                             <img src="./images/icon-add-to-cart.svg" alt="addToCart"
                                  class="w-[16px] h-[16px]"/>
@@ -173,7 +178,7 @@
                         <img src="./images/image-brownie-desktop.jpg" alt="product"
                              class="min-w-[191px] rounded-xl"/>
 
-                        <button class="absolute addBtn -bottom-5 inset-x-0 mx-auto w-max">
+                        <button id="product_8" class="absolute addBtn -bottom-5 inset-x-0 mx-auto w-max">
                             Add to Cart
                             <img src="./images/icon-add-to-cart.svg" alt="addToCart"
                                  class="w-[16px] h-[16px]"/>
@@ -194,7 +199,8 @@
                         <img src="./images/image-panna-cotta-desktop.jpg" alt="product"
                              class="min-w-[191px] rounded-xl"/>
 
-                        <button class="absolute addBtn -bottom-5 inset-x-0 mx-auto w-max">
+                        <button id="product_9"
+                                class="absolute addBtn -bottom-5 inset-x-0 mx-auto w-max">
                             Add to Cart
                             <img src="./images/icon-add-to-cart.svg" alt="addToCart"
                                  class="w-[16px] h-[16px]"/>
@@ -214,7 +220,7 @@
         <section class="flex flex-none w-full md:basis-1/3 md:max-w-[350px]">
             <div class="bg-white rounded-xl px-8 py-8 w-full">
                 <h3 class="text-2xl font-bold text-orange mb-4">
-                    Your Cart (0)
+                    Your Cart (<span id="cartCount">0</span>)
                     <!-- TODO: Products in card counter logic -->
                 </h3>
 
@@ -229,7 +235,7 @@
 
                 <!-- Cart with products -->
 
-                <div id="cart" class="flex flex-col gap-5">
+                <div id="cart" class="hidden flex-col gap-5">
                     <!-- Product item 1 -->
                     <div
                             class="flex flex-row justify-between gap-3 pb-4 border-b

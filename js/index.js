@@ -32,8 +32,9 @@ class Order {
             const currentCount = this.products[productId]
             if (currentCount === 1) {
                 delete this.products[productId]
+            } else {
+                this.products[productId] = currentCount - 1
             }
-            this.products[productId] = currentCount - 1
         }
     }
 
@@ -58,8 +59,8 @@ class Order {
                             <strong class="text-roseBeige mr-4">$${totalPrice}</strong>
                         </p>
                     </div>
-                    <img src="./images/icon-remove-item.svg" alt="remove"
-                         class="cursor-pointer rounded-full p-0.5 border border-roseBeige
+                    <img  data-id="${productId}" src="./images/icon-remove-item.svg" alt="remove"
+                         class="removeOrderItem cursor-pointer rounded-full p-0.5 border border-roseBeige
                          hover:invert hover:bg-black"/>
                 </div>
             `;
@@ -83,44 +84,64 @@ class Order {
     }
 }
 
-const cart = document.getElementById('cart');
-const emptyCart = document.getElementById('emptyCart');
-const cartCount = document.getElementById('cartCount')
-const orderItemsContainer = document.getElementById('orderItemsContainer')
-const orderTotalPrice = document.getElementById('orderTotalPrice')
 const order = new Order();
 
-showCart()
+const cart = document.getElementById('cart');
+const emptyCart = document.getElementById('emptyCart');
+const cartCount = document.getElementById('cartCount');
+const orderItemsContainer = document.getElementById('orderItemsContainer');
+const orderTotalPrice = document.getElementById('orderTotalPrice');
+const btns = document.querySelectorAll('.addBtn');
 
 function showCart() {
-    const count = order.getProductsCount()
+    const count = order.getProductsCount();
 
     if (count > 0) {
-        cart.classList.remove("hidden")
-        cart.classList.add("flex")
-        emptyCart.classList.add("hidden")
-        emptyCart.classList.remove("flex")
+        cart.classList.remove('hidden');
+        cart.classList.add('flex');
+        emptyCart.classList.add('hidden');
+        emptyCart.classList.remove('flex');
     } else {
-        cart.classList.add("hidden")
-        cart.classList.remove("flex")
-        emptyCart.classList.remove("hidden")
-        emptyCart.classList.add("flex")
+        cart.classList.add('hidden');
+        cart.classList.remove('flex');
+        emptyCart.classList.remove('hidden');
+        emptyCart.classList.add('flex');
     }
 
-    cartCount.innerHTML = +count;
+    cartCount.innerHTML = count;
 }
 
-const btns = document.querySelectorAll(".addBtn")
+function addRemoveBtnHandlers() {
+    orderItemsContainer.addEventListener('click', (e) => {
+        const clickedButton = e.target.closest('.removeOrderItem');
+
+        if (!clickedButton) return;
+
+        const productItem = clickedButton.closest('.flex.flex-row');
+        productItem?.remove();
+
+        const productId = clickedButton.dataset.id;
+        if (productId) {
+            order.removeProduct(productId);
+            orderItemsContainer.innerHTML = order.renderProductTemplates();
+            orderTotalPrice.innerHTML = order.getOrderTotalPrice();
+            showCart();
+        }
+    });
+}
 
 btns.forEach((btn) => {
-    btn.addEventListener('click', e => {
-        const clickedButton = e.currentTarget
-        clickedButton.classList.add('active')
+    btn.addEventListener('click', (e) => {
+        const clickedButton = e.currentTarget;
+        clickedButton.classList.add('active');
 
-        order.addProduct(clickedButton.id)
+        order.addProduct(clickedButton.id);
 
-        showCart()
-        orderItemsContainer.innerHTML = order.renderProductTemplates()
-        orderTotalPrice.innerHTML = order.getOrderTotalPrice()
-    })
-})
+        showCart();
+        orderItemsContainer.innerHTML = order.renderProductTemplates();
+        orderTotalPrice.innerHTML = order.getOrderTotalPrice();
+    });
+});
+
+addRemoveBtnHandlers();
+showCart();

@@ -62,7 +62,7 @@ const PRODUCTS_LIST = [
             image: './images/image-panna-cotta-desktop.jpg'
         }
     }
-];
+]
 
 class Order {
     products = {}
@@ -73,7 +73,7 @@ class Order {
 
     addProduct(productId) {
         if (!this.products[productId]) {
-            this.products[productId] = 1;
+            this.products[productId] = 1
         } else {
             const currentCount = this.products[productId]
             this.products[productId] = currentCount + 1
@@ -91,16 +91,20 @@ class Order {
         }
     }
 
+    getCountById(productId) {
+        return this.products[productId]
+    }
+
     renderOrderCart() {
-        let html = '';
+        let html = ''
 
         Object.entries(this.products).forEach(([productId, count]) => {
-            const productData = PRODUCTS_LIST.find(p => p[productId]);
-            if (!productData) return;
+            const productData = PRODUCTS_LIST.find(p => p[productId])
+            if (!productData) return
 
-            const {name, price} = productData[productId];
-            const priceNum = parseFloat(price);
-            const totalPrice = (priceNum * count).toFixed(2);
+            const {name, price} = productData[productId]
+            const priceNum = parseFloat(price)
+            const totalPrice = (priceNum * count).toFixed(2)
 
             html += `
                 <div class="flex flex-row justify-between gap-3 pb-4 border-b border-b-gray-200 items-center">
@@ -116,22 +120,22 @@ class Order {
                          class="removeOrderItem cursor-pointer rounded-full p-0.5 border border-roseBeige
                          hover:invert hover:bg-black"/>
                 </div>
-            `;
-        });
+            `
+        })
 
-        return html;
+        return html
     }
 
-    renderOrderSummary () {
-        let html = '';
+    renderOrderSummary() {
+        let html = ''
 
         Object.entries(this.products).forEach(([productId, count]) => {
-            const productData = PRODUCTS_LIST.find(p => p[productId]);
-            if (!productData) return;
+            const productData = PRODUCTS_LIST.find(p => p[productId])
+            if (!productData) return
 
-            const {name, price, image} = productData[productId];
-            const priceNum = parseFloat(price);
-            const totalPrice = (priceNum * count).toFixed(2);
+            const {name, price, image} = productData[productId]
+            const priceNum = parseFloat(price)
+            const totalPrice = (priceNum * count).toFixed(2)
 
             html += `
                 <div class="flex flex-row justify-between pb-4 border-b border-b-gray-200 items-center">
@@ -150,94 +154,131 @@ class Order {
                         $${totalPrice}
                     </p>
                 </div>
-            `;
-        });
+            `
+        })
 
-        return html;
+        return html
     }
 
     getOrderTotalPrice() {
         let totalPrice = 0
         Object.entries(this.products).forEach(([productId, productCount]) => {
-            const productData = PRODUCTS_LIST.find(p => p[productId]);
+            const productData = PRODUCTS_LIST.find(p => p[productId])
             if (productData) {
-                const {price} = productData[productId];
+                const {price} = productData[productId]
                 const productPrice = parseFloat(price)
                 totalPrice += productPrice * productCount
             }
         })
 
-        return totalPrice.toFixed(2);
+        return totalPrice.toFixed(2)
     }
 }
 
-const order = new Order();
+const order = new Order()
 
-const cart = document.getElementById('cart');
-const emptyCart = document.getElementById('emptyCart');
-const cartCount = document.getElementById('cartCount');
-const orderItemsContainer = document.getElementById('orderItemsContainer');
-const confirmOrderBtn = document.getElementById('confirmOrderBtn');
-const orderTotalPrice = document.getElementById('orderTotalPrice');
-const orderSummaryTotalPrice = document.getElementById('orderSummaryTotalPrice');
-const btns = document.querySelectorAll('.addBtn');
+const cart = document.getElementById('cart')
+const emptyCart = document.getElementById('emptyCart')
+const cartCount = document.getElementById('cartCount')
+const orderItemsContainer = document.getElementById('orderItemsContainer')
+const confirmOrderBtn = document.getElementById('confirmOrderBtn')
+const orderTotalPrice = document.getElementById('orderTotalPrice')
+const orderSummaryTotalPrice = document.getElementById('orderSummaryTotalPrice')
+const btns = document.querySelectorAll('.addBtn')
 
 function showCart() {
-    const count = order.getProductsCount();
+    const count = order.getProductsCount()
 
     if (count > 0) {
-        cart.classList.remove('hidden');
-        cart.classList.add('flex');
-        emptyCart.classList.add('hidden');
-        emptyCart.classList.remove('flex');
+        cart.classList.remove('hidden')
+        cart.classList.add('flex')
+        emptyCart.classList.add('hidden')
+        emptyCart.classList.remove('flex')
     } else {
-        cart.classList.add('hidden');
-        cart.classList.remove('flex');
-        emptyCart.classList.remove('hidden');
-        emptyCart.classList.add('flex');
+        cart.classList.add('hidden')
+        cart.classList.remove('flex')
+        emptyCart.classList.remove('hidden')
+        emptyCart.classList.add('flex')
     }
 
-    cartCount.innerHTML = count;
+    cartCount.innerHTML = count
 }
 
 function addRemoveBtnHandlers() {
     orderItemsContainer.addEventListener('click', (e) => {
-        const clickedButton = e.target.closest('.removeOrderItem');
+        const clickedButton = e.target.closest('.removeOrderItem')
+        if (!clickedButton) return
 
-        if (!clickedButton) return;
+        const productId = clickedButton.dataset.id
+        if (!productId) return
 
-        const productItem = clickedButton.closest('.flex.flex-row');
-        productItem?.remove();
+        order.removeProduct(productId)
 
-        const productId = clickedButton.dataset.id;
-        if (productId) {
-            order.removeProduct(productId);
-            orderItemsContainer.innerHTML = order.renderOrderCart();
-            orderTotalPrice.innerHTML = order.getOrderTotalPrice();
-            showCart();
+        const addButton = document.getElementById(productId)
+        if (addButton) {
+            const count = order.getCountById(productId)
+
+            const countEl = addButton.querySelector('.addBtnCount')
+            const iconCart = addButton.querySelector('.addBtnIconCart')
+            const iconAdded = addButton.querySelector('.addBtnIconAdded')
+
+            if (!count) {
+                if (countEl) countEl.classList.add('hidden')
+                if (iconCart) iconCart.classList.remove('hidden')
+                if (iconAdded) iconAdded.classList.add('hidden')
+
+                addButton.classList.remove('active')
+            } else {
+                if (countEl) {
+                    countEl.textContent = `x${count}`
+                    countEl.classList.remove('hidden')
+                }
+            }
         }
-    });
+
+        orderItemsContainer.innerHTML = order.renderOrderCart()
+        orderTotalPrice.innerHTML = order.getOrderTotalPrice()
+        showCart()
+    })
 }
 
 btns.forEach((btn) => {
     btn.addEventListener('click', (e) => {
-        const clickedButton = e.currentTarget;
-        clickedButton.classList.add('active');
+        const clickedButton = e.currentTarget
+        const productId = clickedButton.id
 
-        order.addProduct(clickedButton.id);
+        clickedButton.classList.add('active')
+        order.addProduct(productId)
 
-        showCart();
-        orderItemsContainer.innerHTML = order.renderOrderCart();
-        orderTotalPrice.innerHTML = order.getOrderTotalPrice();
-    });
-});
+        const count = order.getCountById(productId)
+        const countEl = clickedButton.querySelector('.addBtnCount')
+        if (countEl) {
+            countEl.textContent = `x${count}`
+            countEl.classList.remove('hidden')
+        }
 
-confirmOrderBtn.addEventListener("click", () => {
-    document.getElementById('orderSummaryDialog').showModal();
-    const orderItemsModalContainer = document.getElementById('orderItemsModalContainer');
-    orderItemsModalContainer.innerHTML = order.renderOrderSummary()
-    orderSummaryTotalPrice.innerHTML = order.getOrderTotalPrice();
+        const iconCart = clickedButton.querySelector('.addBtnIconCart')
+        if (iconCart) {
+            iconCart.classList.add('hidden')
+        }
+
+        const iconAdded = clickedButton.querySelector('.addBtnIconAdded')
+        if (iconAdded) {
+            iconAdded.classList.remove('hidden')
+        }
+
+        showCart()
+        orderItemsContainer.innerHTML = order.renderOrderCart()
+        orderTotalPrice.innerHTML = order.getOrderTotalPrice()
+    })
 })
 
-addRemoveBtnHandlers();
-showCart();
+confirmOrderBtn.addEventListener("click", () => {
+    document.getElementById('orderSummaryDialog').showModal()
+    const orderItemsModalContainer = document.getElementById('orderItemsModalContainer')
+    orderItemsModalContainer.innerHTML = order.renderOrderSummary()
+    orderSummaryTotalPrice.innerHTML = order.getOrderTotalPrice()
+})
+
+addRemoveBtnHandlers()
+showCart()

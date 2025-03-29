@@ -9,6 +9,6 @@
     }
 
     .addBtn.active {
-        @apply bg-yellow-500 text-white border-none
+        @apply bg-green-400 text-white border-none
     }
 }

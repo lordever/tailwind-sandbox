@@ -59,7 +59,7 @@ class Order {
                             <strong class="text-roseBeige mr-4">$${totalPrice}</strong>
                         </p>
                     </div>
-                    <img  data-id="${productId}" src="./images/icon-remove-item.svg" alt="remove"
+                    <img data-id="${productId}" src="./images/icon-remove-item.svg" alt="remove"
                          class="removeOrderItem cursor-pointer rounded-full p-0.5 border border-roseBeige
                          hover:invert hover:bg-black"/>
                 </div>
@@ -90,7 +90,9 @@ const cart = document.getElementById('cart');
 const emptyCart = document.getElementById('emptyCart');
 const cartCount = document.getElementById('cartCount');
 const orderItemsContainer = document.getElementById('orderItemsContainer');
+const confirmOrderBtn = document.getElementById('confirmOrderBtn');
 const orderTotalPrice = document.getElementById('orderTotalPrice');
+const orderSummaryTotalPrice = document.getElementById('orderSummaryTotalPrice');
 const btns = document.querySelectorAll('.addBtn');
 
 function showCart() {
@@ -142,6 +144,13 @@ btns.forEach((btn) => {
         orderTotalPrice.innerHTML = order.getOrderTotalPrice();
     });
 });
+
+confirmOrderBtn.addEventListener("click", () => {
+    document.getElementById('orderSummaryDialog').showModal();
+    const orderItemsModalContainer = document.getElementById('orderItemsModalContainer');
+    orderItemsModalContainer.innerHTML = order.renderProductTemplates()
+    orderSummaryTotalPrice.innerHTML = order.getOrderTotalPrice();
+})
 
 addRemoveBtnHandlers();
 showCart();

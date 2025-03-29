@@ -16,7 +16,7 @@
 
     <script defer src="./js/index.js"></script>
 </head>
-<body class="bg-vanillaCream">
+<body class="bg-vanillaCream relative">
     <div
             class="flex flex-col items-center justify-center gap-[30px] px-[30px] py-[30px]
             md:flex-row md:justify-center md:items-start">
@@ -271,30 +271,29 @@
                 </div>
             </div>
         </section>
-    </div>
 
+        <!-- Order summary dialog -->
+        <dialog id="orderSummaryDialog"
+                class="p-6 rounded-xl shadow-lg border-none m-0 md:m-auto md:w-[500px] max-w-full w-full">
+            <img src="./images/icon-order-confirmed.svg" class="w-[28px] mb-[30px]" alt="successIcon"/>
+            <h2 class="text-3xl font-bold text-darkBrown">Order Confirmed</h2>
+            <h6 class="text-sm text-warmTaupe">We hope you enjoy your food!</h6>
 
-    <!-- Order summary dialog -->
-    <dialog id="orderSummaryDialog"
-            class="p-6 rounded-xl shadow-lg w-96 max-w-full border border-gray-300">
-        <img src="./images/icon-order-confirmed.svg" class="w-[28px] mb-[30px]" alt="successIcon" />
-        <h2 class="text-3xl font-bold text-darkBrown">Order Confirmed</h2>
-        <h6 class="text-sm text-warmTaupe">We hope you enjoy your food!</h6>
+            <div class="mt-7 py-2 px-6 rounded-md bg-vanillaCream">
+                <div id="orderItemsModalContainer" class="flex flex-col gap-5"></div>
 
-        <div class="mt-7 py-2 px-6 rounded-md bg-vanillaCream">
-            <div id="orderItemsModalContainer" class="flex flex-col gap-5"></div>
-
-            <!-- Order total -->
-            <div class="flex justify-between items-center">
-                <h6 class="font-medium text-xs text-darkBrown">Order total</h6>
-                <h2 class="text-lg font-bold">$<span id="orderSummaryTotalPrice">0.00</span></h2>
+                <!-- Order total -->
+                <div class="flex justify-between items-center mt-5">
+                    <h6 class="font-medium text-xs text-warmTaupe">Order total</h6>
+                    <h2 class="text-lg font-bold">$<span id="orderSummaryTotalPrice">0.00</span></h2>
+                </div>
             </div>
-        </div>
-        <button
-                onclick="document.getElementById('orderSummaryDialog').close()"
-                class="mt-[30px] font-medium w-full py-2 rounded-2xl bg-orange text-white hover:bg-brightOrange">
-            Start New Order
-        </button>
-    </dialog>
+            <button
+                    onclick="document.getElementById('orderSummaryDialog').close()"
+                    class="mt-[30px] font-medium w-full py-2 rounded-2xl bg-orange text-white hover:bg-brightOrange">
+                Start New Order
+            </button>
+        </dialog>
+    </div>
 </body>
 </html>

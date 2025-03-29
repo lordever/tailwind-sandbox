@@ -1,15 +1,68 @@
-const PRODUCTS_LIST =
-    [
-        {product_1: {name: 'Waffle with Berries', price: '6.50'}},
-        {product_2: {name: 'Vanilla Bean Crème Brûlée', price: '7.00'}},
-        {product_3: {name: 'Macaron Mix of Five', price: '8.00'}},
-        {product_4: {name: 'Classic Tiramisu', price: '5.50'}},
-        {product_5: {name: 'Pistachio Baklava', price: '4.00'}},
-        {product_6: {name: 'Lemon Meringue Pie', price: '5.00'}},
-        {product_7: {name: 'Red Velvet Cake', price: '4.50'}},
-        {product_8: {name: 'Salted Caramel Brownie', price: '4.50'}},
-        {product_9: {name: 'Vanilla Panna Cotta', price: '6.50'}}
-    ];
+const PRODUCTS_LIST = [
+    {
+        product_1: {
+            name: 'Waffle with Berries',
+            price: '6.50',
+            image: './images/image-waffle-desktop.jpg'
+        }
+    },
+    {
+        product_2: {
+            name: 'Vanilla Bean Crème Brûlée',
+            price: '7.00',
+            image: './images/image-creme-brulee-desktop.jpg'
+        }
+    },
+    {
+        product_3: {
+            name: 'Macaron Mix of Five',
+            price: '8.00',
+            image: './images/image-macaron-desktop.jpg'
+        }
+    },
+    {
+        product_4: {
+            name: 'Classic Tiramisu',
+            price: '5.50',
+            image: './images/image-tiramisu-desktop.jpg'
+        }
+    },
+    {
+        product_5: {
+            name: 'Pistachio Baklava',
+            price: '4.00',
+            image: './images/image-baklava-desktop.jpg'
+        }
+    },
+    {
+        product_6: {
+            name: 'Lemon Meringue Pie',
+            price: '5.00',
+            image: './images/image-meringue-desktop.jpg'
+        }
+    },
+    {
+        product_7: {
+            name: 'Red Velvet Cake',
+            price: '4.50',
+            image: './images/image-cake-desktop.jpg'
+        }
+    },
+    {
+        product_8: {
+            name: 'Salted Caramel Brownie',
+            price: '4.50',
+            image: './images/image-brownie-desktop.jpg'
+        }
+    },
+    {
+        product_9: {
+            name: 'Vanilla Panna Cotta',
+            price: '6.50',
+            image: './images/image-panna-cotta-desktop.jpg'
+        }
+    }
+];
 
 class Order {
     products = {}
@@ -38,7 +91,7 @@ class Order {
         }
     }
 
-    renderProductTemplates() {
+    renderOrderCart() {
         let html = '';
 
         Object.entries(this.products).forEach(([productId, count]) => {
@@ -62,6 +115,40 @@ class Order {
                     <img data-id="${productId}" src="./images/icon-remove-item.svg" alt="remove"
                          class="removeOrderItem cursor-pointer rounded-full p-0.5 border border-roseBeige
                          hover:invert hover:bg-black"/>
+                </div>
+            `;
+        });
+
+        return html;
+    }
+
+    renderOrderSummary () {
+        let html = '';
+
+        Object.entries(this.products).forEach(([productId, count]) => {
+            const productData = PRODUCTS_LIST.find(p => p[productId]);
+            if (!productData) return;
+
+            const {name, price, image} = productData[productId];
+            const priceNum = parseFloat(price);
+            const totalPrice = (priceNum * count).toFixed(2);
+
+            html += `
+                <div class="flex flex-row justify-between pb-4 border-b border-b-gray-200 items-center">
+                    <div class="flex flex-row gap-3">
+                        <img width="40" height="40" src="${image}" alt="${productId}_image" class="rounded-md" />
+                        <div class="flex flex-col gap-2">
+                            <h6 class="text-xs font-semibold">${name}</h6>
+                            <p class="text-xs">
+                                <strong class="text-orange mr-4">x${count}</strong>
+                                <strong class="text-roseBeige mr-4 opacity-60">@ $${price}</strong>
+                            </p>
+                        </div>
+                    </div>
+                   
+                    <p class="font-bold">
+                        $${totalPrice}
+                    </p>
                 </div>
             `;
         });
@@ -125,7 +212,7 @@ function addRemoveBtnHandlers() {
         const productId = clickedButton.dataset.id;
         if (productId) {
             order.removeProduct(productId);
-            orderItemsContainer.innerHTML = order.renderProductTemplates();
+            orderItemsContainer.innerHTML = order.renderOrderCart();
             orderTotalPrice.innerHTML = order.getOrderTotalPrice();
             showCart();
         }
@@ -140,7 +227,7 @@ btns.forEach((btn) => {
         order.addProduct(clickedButton.id);
 
         showCart();
-        orderItemsContainer.innerHTML = order.renderProductTemplates();
+        orderItemsContainer.innerHTML = order.renderOrderCart();
         orderTotalPrice.innerHTML = order.getOrderTotalPrice();
     });
 });
@@ -148,7 +235,7 @@ btns.forEach((btn) => {
 confirmOrderBtn.addEventListener("click", () => {
     document.getElementById('orderSummaryDialog').showModal();
     const orderItemsModalContainer = document.getElementById('orderItemsModalContainer');
-    orderItemsModalContainer.innerHTML = order.renderProductTemplates()
+    orderItemsModalContainer.innerHTML = order.renderOrderSummary()
     orderSummaryTotalPrice.innerHTML = order.getOrderTotalPrice();
 })
 

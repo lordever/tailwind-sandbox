@@ -18,10 +18,51 @@
     <section class="flex justify-center items-center h-screen">
         <!-- Card -->
         <div class="relative max-w-[384px]">
+            <!-- Background card -->
             <div class="absolute inset-0 bg-gray-950 rounded-2xl translate-x-2 translate-y-2 z-0"></div>
 
+            <!-- Top Card -->
             <div class="relative bg-white rounded-2xl border border-gray-950 p-6 z-10">
-                <img src="./images/illustration-article.svg" alt="illustration" class="rounded-xl">
+
+                <div class="flex flex-col gap-6">
+                    <img src="./images/illustration-article.svg"
+                         alt="illustration"
+                         class="rounded-xl">
+
+                    <!-- Article section -->
+                    <section class="flex flex-col gap-3">
+                        <!-- Label -->
+                        <div class="w-max px-3 py-1 bg-yellow rounded-md">
+                            <h6 class="text-sm text-gray-950 font-bold">
+                                Learning
+                            </h6>
+                        </div>
+
+                        <!-- Publish date -->
+                        <p class="text-sm font-medium text-gray-950">
+                            Published 21 Dec 2023
+                        </p>
+
+                        <!-- Title -->
+                        <h3 class="text-2xl font-extrabold text-gray-950">
+                            HTML & CSS foundations
+                        </h3>
+
+                        <!-- Description -->
+                        <p class="text-base text-gray-400 font-medium">
+                            These languages are the backbone of every website, defining structure,
+                            content, and presentation.
+                        </p>
+                    </section>
+
+                    <!-- User section -->
+                    <section class="flex flex-row gap-3 items-center">
+                        <img src="./images/image-avatar.webp" alt="avatar"
+                             class="w-8 h-8 rounded-full" />
+
+                        <h3 class="text-sm font-extrabold text-gray-950">Greg Hooper</h3>
+                    </section>
+                </div>
             </div>
         </div>
     </section>

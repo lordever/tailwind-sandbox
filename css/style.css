@@ -796,6 +796,11 @@ video {
   text-decoration-line: line-through;
 }
 
+.hover\:bg-green-700:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(26 64 50 / var(--tw-bg-opacity, 1));
+}
+
 @media (min-width: 576px) {
   .md\:flex-row {
     flex-direction: row;

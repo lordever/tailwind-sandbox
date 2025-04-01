@@ -9,13 +9,60 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+          rel="stylesheet">
 
     <title>Product preview card component</title>
 </head>
-<body>
-<h1 class="text-3xl font-fraunces">
-    Hello world!
-</h1>
+<body class="bg-cream">
+    <!-- Card section -->
+    <section class="flex items-center justify-center min-h-screen px-4 py-5">
+        <!-- Card -->
+        <div class="flex flex-col md:flex-row bg-white rounded-xl mx-3 my-20 md:md-0">
+            <!-- Image -->
+            <div class="img">
+            </div>
+
+            <!-- Right -->
+            <div class="flex flex-col p-8 bg-white gap-8 max-w-[300px]">
+                <!-- Description section -->
+                <div class="flex flex-col gap-6">
+                    <h5 class="text-preset-4 text-gray uppercase">
+                        Perfume
+                    </h5>
+
+                    <h2 class="text-preset-1 font-fraunces font-bold text-black">
+                        Gabrielle Essence
+                        Eau De
+                        Parfum
+                    </h2>
+
+                    <p class="text-preset-3 text-gray font-medium">A floral, solar and voluptuous
+                        interpretation composed by Olivier Polge, Perfumer-Creator for the House of
+                        CHANEL.</p>
+                </div>
+
+                <!-- Price -->
+                <div class="flex flex-row gap-4 items-center">
+                    <h2 class="text-preset-1 font-fraunces font-bold text-green-500">
+                        $149.99
+                    </h2>
+
+                    <span class="text-preset-5 text-gray line-through font-medium">
+                        $169.99
+                    </span>
+                </div>
+
+                <!-- Add to cart btn -->
+                <button
+                        class="flex flex-row gap-2 items-center justify-center bg-green-500 px-[60px] py-[17px] rounded-md">
+                    <img src="./images/icon-cart.svg" alt="cart" class="w-4 h-4" />
+
+                    <span class="text-preset-2 text-white font-bold">Add to Cart</span>
+                </button>
+            </div>
+
+        </div>
+    </section>
 </body>
 </html>

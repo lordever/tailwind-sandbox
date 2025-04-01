@@ -584,20 +584,6 @@ video {
   }
 }
 
-.m-0 {
-  margin: 0px;
-}
-
-.mx-20 {
-  margin-left: 5rem;
-  margin-right: 5rem;
-}
-
-.my-3 {
-  margin-top: 0.75rem;
-  margin-bottom: 0.75rem;
-}
-
 .mx-3 {
   margin-left: 0.75rem;
   margin-right: 0.75rem;
@@ -608,26 +594,12 @@ video {
   margin-bottom: 5rem;
 }
 
-.mx-auto {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.my-auto {
-  margin-top: auto;
-  margin-bottom: auto;
-}
-
 .flex {
   display: flex;
 }
 
 .h-4 {
   height: 1rem;
-}
-
-.h-screen {
-  height: 100vh;
 }
 
 .min-h-screen {
@@ -701,29 +673,24 @@ video {
   padding: 2rem;
 }
 
-.px-\[60px\] {
-  padding-left: 60px;
-  padding-right: 60px;
-}
-
-.py-\[17px\] {
-  padding-top: 17px;
-  padding-bottom: 17px;
-}
-
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
 }
 
-.py-10 {
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
+.px-\[60px\] {
+  padding-left: 60px;
+  padding-right: 60px;
 }
 
 .py-5 {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
+}
+
+.py-\[17px\] {
+  padding-top: 17px;
+  padding-bottom: 17px;
 }
 
 .font-fraunces {

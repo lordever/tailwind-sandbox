@@ -5,6 +5,14 @@
 
 @layer components {
     .card {
-        @apply p-8 pb-[47px] shadow-xl rounded-xl bg-white border-t-4;
+        @apply p-8 pb-[47px] shadow-xl rounded-md bg-white border-t-4 max-w-[350px];
+    }
+
+    .cardHeader {
+        @apply flex flex-col gap-1.5;
+    }
+
+    .cardImgWrapper {
+        @apply flex flex-row mt-8 justify-end;
     }
 }

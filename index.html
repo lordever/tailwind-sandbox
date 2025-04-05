@@ -18,7 +18,7 @@
     <!-- Text header section -->
     <section
             class="flex flex-col gap-4 items-center mt-[56px] mb-[60px] lg:mt-[102px]
-            lg:mb-[80px] md:mt-10 md:mb-[74px] mx-8">
+            md:mt-10 md:mb-[74px] mx-8">
 
         <div class="flex flex-col">
             <h1 class="text-mobile-preset-2 md:text-preset-2 text-gray-500">
@@ -40,28 +40,64 @@
 
     <!-- Cards section -->
     <section
-            class="flex flex-col lg:flex-row md:flex-col gap-4 justify-center items-center
+            class="flex flex-col lg:flex-row md:flex-col gap-8 justify-center items-center
             mt-[60px] md:mt-[74px] pb-[46px] mx-8">
         <div class="card border-cyan">
-            <h2 class="text-preset-3 text-gray-500">Title</h2>
-            <p class="text-preset-5 text-gray-400">Lorem ipsum dolor sit amet, consectetur.</p>
+
+            <!-- Card header -->
+            <div class="cardHeader">
+                <h2 class="text-preset-3 text-gray-500">Supervisor</h2>
+                <p class="text-preset-5 text-gray-400">Monitors activity to identify project
+                    roadblocks</p>
+            </div>
+
+            <div class="cardImgWrapper">
+                <img src="./images/icon-supervisor.svg" alt="supervisor" class="max-w-[64px]"/>
+            </div>
         </div>
 
         <div class="flex lg:flex-col md:flex-row flex-col gap-4">
             <div class="card border-red">
-                <h2 class="text-preset-3 text-gray-500">Title</h2>
-                <p class="text-preset-5 text-gray-400">Lorem ipsum dolor sit amet, consectetur.</p>
+                <!-- Card header -->
+                <div class="cardHeader">
+                    <h2 class="text-preset-3 text-gray-500">Team Builder</h2>
+                    <p class="text-preset-5 text-gray-400">Scans our talent network to create the
+                        optimal team for your project</p>
+                </div>
+
+                <div class="cardImgWrapper">
+                    <img src="./images/icon-team-builder.svg"
+                         alt="teamBuilder"
+                         class="max-w-[64px]"/>
+                </div>
             </div>
 
             <div class="card border-orange">
-                <h2 class="text-preset-3 text-gray-500">Title</h2>
-                <p class="text-preset-5 text-gray-400">Lorem ipsum dolor sit amet, consectetur.</p>
+                <!-- Card header -->
+                <div class="cardHeader">
+                    <h2 class="text-preset-3 text-gray-500">Karma</h2>
+                    <p class="text-preset-5 text-gray-400">Regularly evaluates our talent to ensure
+                        quality</p>
+                </div>
+
+                <div class="cardImgWrapper">
+                    <img src="./images/icon-karma.svg" alt="karma" class="max-w-[64px]"/>
+                </div>
             </div>
         </div>
 
         <div class="card border-blue">
-            <h2 class="text-preset-3 text-gray-500">Title</h2>
-            <p class="text-preset-5 text-gray-400">Lorem ipsum dolor sit amet, consectetur.</p>
+            <!-- Card header -->
+            <div class="cardHeader">
+                <h2 class="text-preset-3 text-gray-500">Calculator</h2>
+                <p class="text-preset-5 text-gray-400">Uses data from past projects to provide
+                    better
+                    delivery estimates</p>
+            </div>
+
+            <div class="cardImgWrapper">
+                <img src="./images/icon-calculator.svg" alt="calculator" class="max-w-[64px]"/>
+            </div>
         </div>
     </section>
 </body>

@@ -46,7 +46,7 @@ module.exports = {
                 sans: ['Poppins', 'sans-serif'],
             },
             colors: {
-                'grey-500': '#4D4F62',
+                'grey-500': '#4d4f62',
                 'grey-400': '#6A7178',
                 'grey-100': '#FAFAFA',
                 red: '#EA5454',

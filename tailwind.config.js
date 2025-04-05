@@ -8,7 +8,17 @@ module.exports = {
                 lineHeight: '140%',
                 fontWeight: '600'
             }],
+            'mobile-preset-1': ['24px', {
+                letterSpacing: '0.25px',
+                lineHeight: '140%',
+                fontWeight: '600'
+            }],
             'preset-2': ['36px', {
+                letterSpacing: '0.25px',
+                lineHeight: '140%',
+                fontWeight: '200'
+            }],
+            'mobile-preset-2': ['24px', {
                 letterSpacing: '0.25px',
                 lineHeight: '140%',
                 fontWeight: '200'
@@ -20,6 +30,10 @@ module.exports = {
             }],
             'preset-4': ['15px', {
                 letterSpacing: '0px',
+                lineHeight: '140%'
+            }],
+            'mobile-preset-4': ['15px', {
+                letterSpacing: '0.1px',
                 lineHeight: '140%'
             }],
             'preset-5': ['13px', {
@@ -34,10 +48,11 @@ module.exports = {
             colors: {
                 'grey-500': '#4D4F62',
                 'grey-400': '#6A7178',
+                'grey-100': '#FAFAFA',
                 red: '#EA5454',
                 cyan: '#44D3D2',
                 blue: '#549EF2',
-                orange: '#FCAE4A'
+                orange: '#FCAE4A',
             },
         },
     },

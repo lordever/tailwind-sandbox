@@ -554,13 +554,29 @@ video {
   display: none;
 }
 
+.flex {
+  display: flex;
+}
+
 .grid {
   display: grid;
 }
 
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
+.h-screen {
+  height: 100vh;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.bg-grey-150 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(246 245 246 / var(--tw-bg-opacity, 1));
 }
 
 .text-preset-1 {

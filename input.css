@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .card {
+        @apply flex flex-col gap-4 rounded-md p-8 shadow-2xl;
+    }
+
+    .avatar {
+        @apply rounded-full w-[28px] h-[28px];
+    }
+}

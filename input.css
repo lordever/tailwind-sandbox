@@ -4,7 +4,7 @@
 
 @layer components {
     .card {
-        @apply flex flex-col gap-4 rounded-md p-8 shadow-2xl;
+        @apply flex flex-col gap-4 rounded-md p-8 shadow-2xl h-full;
     }
 
     .avatar {

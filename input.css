@@ -6,4 +6,20 @@
     .btn {
         @apply px-10 py-4 text-preset-5 font-bold text-white rounded-3xl;
     }
+
+    .step-indicator {
+        @apply flex flex-col items-center justify-center mt-16 md:mt-[120px] lg:mt-[143px];
+    }
+
+    .step-indicator-line {
+        @apply bg-slate-300 w-[1px] h-20;
+    }
+
+    .step-indicator-circle {
+        @apply border border-slate-300 rounded-full px-[19px] py-4;
+    }
+
+    .step-indicator-number {
+        @apply font-bold text-preset-5 text-slate-600;
+    }
 }

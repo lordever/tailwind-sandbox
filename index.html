@@ -115,7 +115,7 @@
             <!-- Description section -->
             <section class="flex flex-col items-center justify-center mt-16 text-center">
                 <h6
-                        class="mobile-text-preset-3 md:text-tablet-preset-3 lg:text-preset-3
+                        class="text-mobile-preset-3 md:text-tablet-preset-3 lg:text-preset-3
                         font-extrabold text-cyan-600 uppercase">
                     Built for modern use
                 </h6>
@@ -137,7 +137,7 @@
         </section>
 
         <!-- Step indicator  -->
-        <section class="step-indicator relative mt-16 lg:mt-[72px]">
+        <section class="step-indicator relative -bottom-[30px] mt-16 lg:mt-[72px]">
             <div class="step-indicator-line"></div>
             <div class="step-indicator-circle">
                 <span class="step-indicator-number">02</span>
@@ -146,6 +146,30 @@
     </main>
 
     <!-- TODO: footer should be here -->
-    <footer></footer>
+    <footer class="footer">
+        <section
+                class="flex flex-col lg:grid lg:grid-cols-3 pt-16 lg:pt-[112px] gap-6 text-center
+                lg:text-left px-8 md:px-[132px] lg:px-[160px]">
+
+            <h2
+                    class="lg:w-[445px] text-mobile-preset-2 md:text-tablet-preset-2 lg:text-preset-2 text-white font-extrabold flex items-center justify-center">
+                Experience more together
+            </h2>
+
+            <p
+                    class="lg:w-[345px] text-tablet-preset-4 lg:text-preset-4 text-white font-semibold flex items-center justify-center">
+                Stay connected with reliable HD meetings and unlimited one-on-one and group video
+                sessions.
+            </p>
+
+            <div class="flex items-center justify-center">
+                <button class="btn bg-purple-600 hover:bg-purple-400">
+                    Download
+                    <span class="ml-1 text-purple-300">v1.3</span>
+                </button>
+            </div>
+
+        </section>
+    </footer>
 </body>
 </html>

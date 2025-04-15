@@ -3,6 +3,9 @@ module.exports = {
     content: ["./*html"],
     theme: {
         extend: {
+            screens: {
+                lg: '1400px'
+            },
             fontFamily: {
                 'sans': ['Red Hat Display', 'sans-serif']
             },

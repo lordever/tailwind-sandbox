@@ -16,7 +16,7 @@
     }
 
     .step-indicator-circle {
-        @apply border border-slate-300 rounded-full px-[19px] py-4;
+        @apply border border-slate-300 rounded-full px-[19px] py-4 bg-white;
     }
 
     .step-indicator-number {
@@ -25,5 +25,24 @@
 
     .img {
         @apply rounded-xl w-[147px] h-[144px] lg:w-64 lg:h-64;
+    }
+
+    .footer {
+        @apply bg-no-repeat bg-cover bg-center w-full h-[374px] bg-blend-multiply bg-cyan-300;
+        background-image: url('../images/mobile/image-footer.jpg');
+    }
+
+    @screen md {
+        .footer {
+            @apply h-[320px];
+            background-image: url('../images/tablet/image-footer.jpg');
+        }
+    }
+
+    @screen lg {
+        .footer {
+            @apply h-[312px];
+            background-image: url('../images/desktop/image-footer.jpg');
+        }
     }
 }

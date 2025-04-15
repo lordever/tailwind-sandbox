@@ -8,7 +8,7 @@
     }
 
     .step-indicator {
-        @apply flex flex-col items-center justify-center mt-16 md:mt-[120px] lg:mt-[143px];
+        @apply flex flex-col items-center justify-center;
     }
 
     .step-indicator-line {
@@ -21,5 +21,9 @@
 
     .step-indicator-number {
         @apply font-bold text-preset-5 text-slate-600;
+    }
+
+    .img {
+        @apply rounded-xl w-[147px] h-[144px] lg:w-64 lg:h-64;
     }
 }

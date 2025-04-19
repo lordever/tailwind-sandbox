@@ -4,7 +4,7 @@
 
 @layer components {
     .btn {
-        @apply px-10 py-4 text-preset-5 font-bold text-white rounded-3xl;
+        @apply px-10 py-4 text-preset-5 font-black text-white rounded-full;
     }
 
     .step-indicator {
